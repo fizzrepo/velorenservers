@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Veloren Servers - {{ page.title }}</title>
+        <link rel="stylesheet" href="/static/styles.css" media="all">
+        <meta name="description" content="The original server listing website for Veloren servers. {{ page.description }}" />
+        <meta name="robots" content="index, follow, max-snippet: -1, max-image-preview:large, max-video-preview: -1" />
+        <meta content="Veloren Server Listing - {{ page.title }}" property="og:title" />
+        <meta content="The original server listing website for Veloren servers." property="og:description" />
+        <meta content="https://velorenservers.net" property="og:url" />
+        <meta content="https://velorenservers.net/static/embed.png" property="og:image" />
+        <meta content="#6632a8" data-react-helmet="true" name="theme-color" />
+        <link rel="preload" href="/static/img/background.png" as="image" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <a class="navbar-item" href="/">Homepage</a>
+                {% if current_user.is_authenticated %}
+                <a class="navbar-item" href="/create">Create Server</a>
+                <a class="navbar-item" href="/logout">Logout</a>
+                {% else %}
+                <a class="navbar-item" href="/login">Login</a>
+                <a class="navbar-item" href="/register">Register</a>
+                {% endif %}
+                {% if current_user.is_admin %}
+                <a class="navbar-item" href="/admin">Admin</a>
+                {% endif %}
+                <a class="navbar-item" href="/discord">Discord Server</a>
+            </div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class=flashes>
+                    ⚠️
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+        </div>
+        <div class="text disclaimer" style="text-align: center;">
+            This is not an official project of Veloren, and is not affiliated with Veloren in any way. <a style="font-weight: 700;" href="/privacy">Privacy Policy</a>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

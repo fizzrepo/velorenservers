@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="page-title">Register</h1>
+<p class="text">Please register to continue to the website, and please read our <a href="/privacy">privacy policy</a> before creating an account/logging in! We respect your privacy and want you to know what information we collect.</p>
+<div class="form-container">
+    <form action="/register" method="post">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="hello@fizz.red">
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Username">
+  
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="SecurePassword">
+
+        <label for="password-confirm">Confirm Password</label>
+        <input type="password" id="confirm" name="confirm" placeholder="SecurePassword">
+
+        <label for="privacy_agree">I agree to the <a href="/privacy">privacy policy</a></label>
+        <input type="checkbox" id="privacy_agree" name="privacy_agree" value="true">
+    
+        <input type="submit" value="Submit">
+    </form>
+  </div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if news %}
+<div class=flashes>
+    {{ news|safe }}
+</div>
+{% endif %}
+<h1 class="page-title">Veloren Server Listing</h1>
+<p class="text">Veloren Server Listings is a website that helps players find Veloren servers to play on, and to help server admins get their server out in the wild. The website is currently in it's early stages, and is not yet complete. If you have any suggestions for the website or think you can help, please <a href="https://discord.gg/QWQWQWQ">join the Discord server</a>.</p>
+{% if servers.items %}
+<div class="pagination-section">
+    <div class="text pagination-notice">
+        <p><a class="pagination-button" href="/servers/{{ pagination.last }}">«</a>  You are on page {{ pagination.page }} <a class="pagination-button" href="/servers/{{ pagination.next }}">»</a></p>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Server</th>
+            <th>Players</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for server in servers.items %}
+        <tr>
+            <td>{{ server.name }}</td>
+            <td>{{ server.banner }}</td>
+            <td>
+                <div class="banner_container">
+                    <img src="/static/userimg/banner/{{ server.banner }}"></img>
+                    <div class="hostname_box text">
+                        <p>{{ server.hostname }}</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="pagination-section">
+    <div class="text pagination-notice">
+        <p><a class="pagination-button" href="/servers/{{ pagination.last }}">«</a>  You are on page {{ pagination.page }} <a class="pagination-button" href="/servers/{{ pagination.next }}">»</a></p>
+    </div>
+</div>
+{% else %}
+<p class="text">You've gone so far that there are no more servers to display! How about you <a href="/create">add your own</a> or <a href="/servers/{{ pagination.last }}">go back</a>?</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Noto+Sans:wght@300;400;500&display=swap');
+
+body {
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    background: fixed url('/static/img/background.png') no-repeat bottom/cover;
+    margin: 0px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 0;
+    background-color: #080808;
+}
+
+.navbar {
+    background-color: #260016;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.flashes {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding: 1rem;
+    background-color: #260016;
+    color: #fff;
+    font-weight: 700;
+}
+
+.navbar-item {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.disclaimer {
+    padding-top: 0.75rem;
+}
+
+.page-title {
+    padding: 20px 0;
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+}
+
+.page-subtitle {
+    padding: 20px 0;
+    margin: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    color: #fbc702;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgb(20, 20, 20);
+}
+
+.table.table-striped thead th {
+    background-color: #260016;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.text {
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.pagination-notice {
+    text-decoration: underline;
+    text-decoration-color: #fbc702;
+    font-size: 1rem;
+}
+
+.pagination-button {
+    color: #fbc702;
+    font-size: 1rem;
+}
+
+.pagination-section {
+    text-align: center;
+}
+
+.seperator {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid #ff0095;
+}
+
+input[type=text], input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #fbc702;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #ff0095;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #8e45a0;
+}
+  
+.form-container {
+    padding: 20px;
+    color: #fff;
+}
+
+.privacy-policity-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: center;
+}
+
+tr {
+    height: 100px;
+    border-bottom: 1px solid rgba(200, 0, 255);
+}
+
+a {
+    color: #fbc702;
+    text-decoration: underline;
+}
+
+.number_one {
+    max-width: 70px !important;
+}
+
+.banner_container {
+    padding: 0;
+    margin: 0;
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+.banner_container img {
+    width: 100%;
+    height: auto;
+}
+
+.hostname_box {
+    padding: 0;
+    margin: 0;
+    max-width: 300px;
+    background-color: #080808;
+}
+
+.serverlist {
+    max-width: 100%;
+}
+
+.serverlist table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.serverlist thead th {
+    background-color: #260016;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+.MARGINBOII {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+@media (max-width: 700px) {
+    .serverlist table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 0;
+    }
+
+    .number_one {
+        display: none;
+    }
+
+    .playerlist {
+        display: none;
+    }
+
+    .information {
+        width: 100%;
+        min-width: 100%;
+
+    }
+
+    .information img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 415px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 0 0;
+        max-width: 100%;
+    }
+
+    .disclaimer {
+        padding-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .navbar-item {
+        display: block;
+    }
+}
+

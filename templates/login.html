@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="page-title">Login</h1>
+<p class="text">Please login to continue to the website, and please read our <a href="/privacy">privacy policy</a> before creating an account/logging in! We respect your privacy and want you to know what information we collect.</p>
+<div class="form-container">
+    <form action="/login" method="post">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Username">
+  
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="SecurePassword">
+    
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+{% endblock %}
