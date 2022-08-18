@@ -135,4 +135,4 @@ def favicon():
 @app.route('/discord')
 @view_counter.count
 def discord():
-    return redirect('https://discord.gg/QWQWQWQ')
+    return redirect('https://discord.gg/T56gWngbg5')
