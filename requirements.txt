@@ -2,4 +2,4 @@ flask
 flask-login
 flask-sqlalchmy
 flask-bcrypt
-werkzeug==2.1.2
+werkzeug==3.0.1
