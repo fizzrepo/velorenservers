@@ -3,3 +3,4 @@ flask-login
 flask-sqlalchmy
 flask-bcrypt
 werkzeug==2.1.2
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
